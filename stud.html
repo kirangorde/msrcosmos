@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+body>table
+{
+	width:80%;
+}
+table{
+	border-collapse:collapse;
+}
+table.list-item
+{
+	width:100%;
+}
+td,th
+{
+	border:1px solid #dddddd;
+	text-align:left;
+	padding:8px;
+}
+tr:nth-child(even),table.list thead>tr{
+	background-color:#dddddd;
+}
+input[type="text"],input [type="email"]
+{
+	width:100%;
+	padding:12px 20px;
+	margin:8px 0;
+	display:inline-block;
+	border:1px solid  #ccc;
+	border-radius:4px;
+}
+	
+</style>
+
+
+</head>
+<body>
+<table>
+<tr>
+<td>
+<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+<div>
+<label>Student Id*</label><label class="validation-error hide" id="idValidationError"></label>
+<input type="text" name="sid" id="sid" required></div>
+<div>
+<label>Student Name*</label>
+<input type="text" name="sname" id="sname" required></div>
+<div>
+<label>email*</label>
+<input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></div>
+<div>
+<label>Class*</label>
+<input type="text" name="class" id="class" required></div>
+<div>
+<label>Year*</label>
+<input type="text" name="year" id="year" required></div>
+<div>
+<label>City*</label>
+<input type="text" name="city" id="city" required></div>
+<div>
+<label>Country*</label>
+<input type="text" name="country" id="country" required>
+</div>
+ <div  class="form-action-buttons">
+                        <input type="submit" value="Save" style="color:#F00"/>
+						<input type="submit" value="Clear" style="color:#F00"/>
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="student">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Class</th>
+							<th>Year</th>
+							<th>City</th>
+							<th>Country</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="code1.js"></script>
+</body>
+
+</html>

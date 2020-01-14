@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>This is login page</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="stylesheet" href="login.css"/>
+<script type="text/javascript">
+function check(form)
+{
+ 
+ if(form.username.value == "user@gmail.com" && form.pwd.value == 123456)
+  {
+    alert("success");
+  }
+ else
+ {
+   alert("Error Password or Username");
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<form class="form" method="post" action="studentinfo.html">
+<h2>Login Form</h2>
+<label>Email ID:</label>
+<input type="email" name="username" id="username">
+<label>Password :</label>
+<input type="password" name="pwd" id="pwd">
+<input type="submit" name="login" id="login" value="Login" onclick="check(this.form)")>
+<a href="register.html"><input type="button" name="register" id="register" value="Register"></a>
+</div>
+</body>
+</html> 
